@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc index.ts",
+    "clean": "rm -rfv node_modules generated dist coverage",
     "generate": "prisma generate",
     "test": "vitest run --coverage",
-    "recreate": "npm i && npm run build && npm run generate && npm run test"
+    "recreate": "npm run clean && npm i && npm run build && npm run generate && npm run test"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
